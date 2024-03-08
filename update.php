@@ -1,7 +1,8 @@
 <?php
-  include_once 'database.php';
   session_start();
-  $email=$_SESSION['email'];
+  include_once 'database.php';
+  $email = isset($_SESSION['email']) ? $_SESSION['email'] : null;
+
 
   if(isset($_SESSION['key']))
   {
